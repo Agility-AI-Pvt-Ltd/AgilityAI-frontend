@@ -1,0 +1,42 @@
+{
+  "name": "company-website",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.6",
+    "@zegocloud/zego-uikit-prebuilt": "^2.14.1",
+    "@zegocloud/zego-uikit-prebuilt-live-streaming-rn": "^2.5.3",
+    "@zegocloud/zego-uikit-rn": "^2.17.4",
+    "axios": "^1.7.9",
+    "lucide-react": "^0.475.0",
+    "react": "^19.0.0",
+    "react-delegate-component": "^1.0.0",
+    "react-dom": "^19.0.0",
+    "react-modal": "^3.16.3",
+    "react-router-dom": "^7.1.5",
+    "react-simple-typewriter": "^5.0.1",
+    "react-typewriter-effect": "^1.1.0",
+    "tailwindcss": "^4.0.6",
+    "zego-express-engine-reactnative": "^3.19.1",
+    "zego-express-engine-webrtc": "^3.8.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.19.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.18",
+    "globals": "^15.14.0",
+    "vite": "^6.1.0"
+  }
+}
