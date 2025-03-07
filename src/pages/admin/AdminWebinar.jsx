@@ -1,22 +1,14 @@
 import React, { useRef, useState } from "react";
 import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
-
+import { useParams } from "react-router-dom";
 
 const Webinar = () => {
-  const [isStarted, setIsStarted] = useState(false);
+  const [isStarted, setIsStarted] = useState(false); 
   const videoRef = useRef(null);
 
   const APP_ID = 1907602911;
   const SERVER_SECRET = "6c996b4bf2e9601dc67930114653d538";
-  const ROOM_ID = "WEBINAR_ROOM_123";
-
-  function randomID(len = 5) {
-    const chars =
-      "12345qwertyuiopasdfgh67890jklmnbvcxzMNBVCZXASDQWERTYHGFUIOLKJP";
-    return Array.from({ length: len }, () =>
-      chars.charAt(Math.floor(Math.random() * chars.length))
-    ).join("");
-  }
+  const { ROOM_ID } = useParams();
 
   const startWebinar = () => {
     setIsStarted(true);
@@ -25,8 +17,8 @@ const Webinar = () => {
       APP_ID,
       SERVER_SECRET,
       ROOM_ID,
-      randomID(),
-      randomID()
+      Date.now().toString(),  
+      "Host" 
     );
 
     const zp = ZegoUIKitPrebuilt.create(kitToken);
@@ -36,26 +28,39 @@ const Webinar = () => {
       sharedLinks: [
         {
           name: "Copy link",
-          url: "http://localhost:5173/webinar",
+          url: `http://localhost:5173/webinar/${ROOM_ID}`,
         },
       ],
       scenario: {
-        mode: ZegoUIKitPrebuilt.LiveStreaming,
+        mode: ZegoUIKitPrebuilt.LiveStreaming,  // Change from LiveStreaming to VideoConference
       },
-      showPreJoinView: false, // Bypass pre-join screen
-      showExitDialog: false, // Prevent Zego’s default exit dialog
+      config: {
+        role: "Host",  
+        turnOnMicrophoneWhenJoining: true,  
+        turnOnCameraWhenJoining: true,  
+        showScreenSharingButton: true,  
+        showTextChat: true,  
+        showUserList: true,  
+        showLeaveRoomConfirmDialog: true,  
+        enableUserToChangeName: false,  
+      },
+      showPreJoinView: true,  // Show join options before entering
       onLeaveRoom: () => {
-        window.location.href = "/AIacademy";
+        window.location.href = "/admin/dashboard";
       },
     });
   };
 
   return (
     <div className="flex flex-col justify-center items-center h-screen text-white">
+      <div className="w-full text-center py-3">
+        <p className="text-xl font-semibold">Webinar ID: {ROOM_ID}</p>
+      </div>
+
       {!isStarted ? (
         <button
           onClick={startWebinar}
-          className="px-6 py-3 text-lg font-semibold bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md transition"
         >
           Start Webinar
         </button>

@@ -11,24 +11,24 @@ const CourseCard = ({ course }) => {
 
     const { fetchCourses } = CourseData();
 
-    const deleteHandler = async(id)=>{
-        if(confirm("Are you sure you want to delete this course")){
-            try{
-                const {data} = await axios.delete(`${server}/api/course/${id}`,{
+    const deleteHandler = async (id) => {
+        if (confirm("Are you sure you want to delete this course")) {
+            try {
+                const { data } = await axios.delete(`${server}/api/course/${id}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`,
                     },
                 })
-                
+
                 alert(data.message);
                 fetchCourses();
-            }catch(error){
+            } catch (error) {
                 alert(error.response.data.message);
             }
         }
     }
     return (
-        <div className="bg-white dark:bg-gray-800 shadow-md hover:shadow-2xl hover:scale-105 transition-transform duration-300 p-5 rounded-lg text-center w-72 mx-auto">
+        <div className="bg-gray-800 shadow-md hover:shadow-2xl hover:scale-105 transition-transform duration-300 p-5 rounded-lg text-center w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
             <img
                 src={`${server}/${course.image}`}
                 alt={course.title}
@@ -52,7 +52,6 @@ const CourseCard = ({ course }) => {
                 <>
                     {user && role !== "admin" ? (
                         user.subscription.includes(course._id) ? (
-                            // If the course is already purchased
                             <button
                                 onClick={() => navigate(`/course/study/${course._id}`)}
                                 className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition duration-300"
@@ -60,7 +59,6 @@ const CourseCard = ({ course }) => {
                                 Study
                             </button>
                         ) : (
-                            // If the course is not purchased yet
                             <button
                                 onClick={() => navigate(`/course/${course._id}`)}
                                 className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
@@ -69,7 +67,6 @@ const CourseCard = ({ course }) => {
                             </button>
                         )
                     ) : (
-                        // If the user is an admin
                         <button
                             onClick={() => navigate(`/course/study/${course._id}`)}
                             className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition duration-300"
@@ -79,7 +76,6 @@ const CourseCard = ({ course }) => {
                     )}
                 </>
             ) : (
-                // If the user is not logged in
                 <button
                     onClick={() => navigate("/login")}
                     className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
@@ -88,13 +84,11 @@ const CourseCard = ({ course }) => {
                 </button>
             )}
 
-            <br />
-
             {/* Delete Course - Only for Admin */}
             {user && role === "admin" && (
                 <button
                     className="w-full mt-3 px-6 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 transition duration-300"
-                    onClick={()=>deleteHandler(course._id)}
+                    onClick={() => deleteHandler(course._id)}
                 >
                     Delete
                 </button>

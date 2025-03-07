@@ -5,7 +5,7 @@ import CourseCard from "../components/UI/CourseCard";
 const Courses = () => {
   const { courses } = CourseData();
 
-  return ( 
+  return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <h2 className="text-3xl font-bold dark:text-white mb-8 text-center">
         Available Courses
@@ -15,7 +15,7 @@ const Courses = () => {
         {courses && courses.length > 0 ? (
           courses.map((e) => (
             <div key={e._id} className="flex justify-center">
-              <div className="w-full max-w-xs sm:max-w-sm bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+              <div className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-xs lg:max-w-sm bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
                 <CourseCard course={e} />
               </div>
             </div>
@@ -27,6 +27,7 @@ const Courses = () => {
         )}
       </div>
     </div>
+
   );
 };
 

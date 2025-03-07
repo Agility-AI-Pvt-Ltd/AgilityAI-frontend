@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AppLayout } from "./components/Layout/AppLayout";
 
-
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Services from "./pages/Services"
@@ -14,6 +13,7 @@ import TermsOfService from "./pages/TermsOfService";
 import Policy from "./pages/Policy";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+
 
 
 import Account from "./pages/Account";
@@ -30,9 +30,13 @@ import AdminUsers from "./pages/admin/AdminUsers";
 import AdminEnquiries from "./pages/admin/AdminEnquiries";
 import AdminJobListings from "./pages/admin/AdminJobListings";
 import AdminJobApplications from "./pages/admin/AdminJobApplications";
+import AdminProjects from "./pages/admin/AdminProjects";
 
 import Webinar from "./pages/Webinar";
 import AdminWebinar from "./pages/admin/AdminWebinar";
+import AdminWebinarListing from "./pages/admin/AdminWebinarListing";
+import AdminRecording from "./pages/admin/AdminRecording";
+import Projects from "./pages/Projects";
 
 
 const App = () => {
@@ -105,14 +109,13 @@ const App = () => {
           element: token ? <Lecture /> : <Login />
         },
         {
-          path: "/webinar",
+          path: "/webinar/:ROOM_ID",
           element: <Webinar/>,
         },
         {
-          path: "/adminwebinar",
-          element: <AdminWebinar/>,
+          path: "/projects",
+          element: <Projects/>,
         },
-
       ],
     },
     {
@@ -154,6 +157,22 @@ const App = () => {
     {
       path: "/admin/jobapplications",
       element: token ? <AdminJobApplications/> : <Login />
+    },
+    {
+      path: "/admin/webinarlisting",
+      element: token ? <AdminWebinarListing/> : <Login />
+    },
+    {
+      path: "/admin/recordings",
+      element: token ? <AdminRecording/> : <Login/>
+    },
+    {
+      path: "/admin/projects",
+      element: token ? <AdminProjects/> : <Login/>
+    },
+    {
+      path: "/admin/webinar/:ROOM_ID",
+      element:  token ? <AdminWebinar/> : <Login/>
     },
   ]);
 

@@ -13,7 +13,6 @@ export const CourseContextProvider = ({ children }) => {
   const fetchCourses = async () => {
     try {
       const { data } = await axios.get(`${server}/api/course/all`);
-
       setCourses(data.courses);
     } catch (error) {
       console.log(error);
