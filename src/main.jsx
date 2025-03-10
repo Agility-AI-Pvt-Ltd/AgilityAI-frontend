@@ -6,8 +6,9 @@ import { AuthProvider } from "./context/AuthContext";
 import { CourseContextProvider } from './context/CourseContext.jsx';
 import { WebinarContextProvider } from "./context/WebinarsContext";
 import { ProjectsContextProvider } from './context/ProjectContext.jsx';
+import { Toaster } from 'react-hot-toast';
 
-export const server = "https://agility-server.onrender.com";
+export const server = " http://localhost:5000";
 
 
 createRoot(document.getElementById('root')).render(
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')).render(
       <WebinarContextProvider>
         <ProjectsContextProvider>
           <App />
+          <Toaster/> 
         </ProjectsContextProvider>
       </WebinarContextProvider>
     </CourseContextProvider>

@@ -11,8 +11,8 @@ const WebinarCard = ({ webinar }) => {
     const { user, role } = useAuth();
 
     const handleCopyLink = () => {
-        navigator.clipboard.writeText(`http://localhost:5173/webinar/${webinar.room_id}`);
-        setCopied(true);
+        navigator.clipboard.writeText(`${window.location.origin}/webinar/${webinar.room_id}`);
+        setCopied(true); 
         setTimeout(() => setCopied(false), 2000);
     };
 
@@ -89,7 +89,7 @@ const WebinarCard = ({ webinar }) => {
                     <>
                         <a
                             href={`/webinar/${webinar.room_id}`}
-                            className="bg-gradient-to-r from-[#64B5F6] to-[#1a89ea] hover:from-[#87c5f7] hover:to-[#489ae2] text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-110 flex-grow text-center"
+                            className="bg-gradient-to-r from-[#64B5F6] to-[#1a89ea] hover:from-[rgb(135,197,247)] hover:to-[#489ae2] text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-110 flex-grow text-center"
                         >
                             Join Webinar
                         </a>

@@ -4,7 +4,7 @@ import { server } from "../../main";
 import { WebinarsData } from "../../context/WebinarsContext";
 import { useAuth } from "../../context/AuthContext";
 import axios from "axios";
- 
+  
 const WebinarCard = ({ recording }) => {
     const [copied, setCopied] = useState(false);
     const { fetchRecordings } = WebinarsData();

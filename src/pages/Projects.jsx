@@ -6,7 +6,7 @@ const Projects = () => {
     
 
     return (
-        <div className="max-w-7xl mx-auto pt-2 px-6 mt-12">
+        <div className="max-w-7xl mx-auto pt-2 px-6 mt-12 min-h-screen">
 
             <h2 className="text-4xl sm:text-5xl lg:text-6xl text-center mt-3 tracking-wide">
                 Our{" "}

@@ -2,19 +2,31 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { server } from '../main';
+import axios from 'axios';
+import Spinner from '../components/UI/Spinner';
 
 
 
 const Careers = () => {
     const navigate = useNavigate();
-    const [jobListings, setjobListings] = useState([]);   
+    const [jobListings, setjobListings] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    const fetchJobs = async () => {
+        try {
+            const { data } = await axios.get(`${server}/api/joblistings`);
+            setjobListings(data);
+            setLoading(false);
+        } catch (err) {
+            // console.error("Error fetching jobs:", err);
+            setLoading(false);
+        } finally {
+            setLoading(false);
+        }
+    };
 
     useEffect(() => {
-        //Fetch Jobs
-        fetch(`${server}/api/joblistings`)
-            .then((res) => res.json())
-            .then((data) => setjobListings(data))
-            .catch((err) => console.log("Error in fetching jobs", err));
+        fetchJobs();
     }, []);
 
     return (
@@ -32,41 +44,51 @@ const Careers = () => {
                     </p>
                 </div>
 
-                <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    {jobListings.map((job, index) => (
-                        <div
-                            key={index}
-                            className="bg-[#44515A] shadow-lg rounded-lg p-6 min-h-[350px] flex flex-col justify-between relative"
-                        >
-                            <div>
-                                <h3 className="text-xl font-bold text-[#F5FCE1]">{job.title}</h3>
-                                <p className="mt-2 text-gray-300">📍 {job.location}</p>
-                                <h5 className="mt-6 text-2xl font-semibold">💡 Skills Required:</h5>
-                                <ul className="mt-3 space-y-2 text-gray-300 min-h-[80px] max-h-[120px] overflow-auto">
-                                    {job.skills.length > 0 ? (
-                                        job.skills.map((skill, index) => (
-                                            <li key={index} className="flex items-center gap-2">
-                                                🔹 <span>{skill}</span>
-                                            </li>
-                                        ))
-                                    ) : (
-                                        <li className="text-gray-400">No specific skills mentioned.</li>
-                                    )}
-                                </ul>
-                            </div>
-
-                            {/* Fixed Apply Now Button */}
-                            <div className="absolute bottom-4 left-0 w-full px-6">
-                                <button
-                                    className="w-full py-3 bg-gradient-to-r from-teal-400 to-blue-600 text-white text-lg font-semibold rounded-lg hover:scale-105 transition"
-                                    onClick={() => navigate(`/jobs/${job._id}`)}
-                                >
-                                    Apply Now 🚀
-                                </button>
-                            </div>
+                <div className="mt-12">
+                    {loading ? (
+                        <div className="flex justify-center items-center min-h-[300px]">
+                            <Spinner/>
                         </div>
-                    ))}
+                    ) : (
+                        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                            {jobListings.map((job, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-[#44515A] shadow-lg rounded-lg p-6 min-h-[350px] flex flex-col justify-between relative transition-transform hover:scale-105 duration-300"
+                                >
+                                    <div>
+                                        <h3 className="text-xl font-bold text-[#F5FCE1]">{job.title}</h3>
+                                        <p className="mt-2 text-gray-300">📍 {job.location}</p>
+                                        <h5 className="mt-6 text-2xl font-semibold">💡 Skills Required:</h5>
+                                        <ul className="mt-3 space-y-2 text-gray-300 min-h-[80px] max-h-[120px] overflow-auto">
+                                            {job.skills.length > 0 ? (
+                                                job.skills.map((skill, index) => (
+                                                    <li key={index} className="flex items-center gap-2">
+                                                        🔹 <span>{skill}</span>
+                                                    </li>
+                                                ))
+                                            ) : (
+                                                <li className="text-gray-400">No specific skills mentioned.</li>
+                                            )}
+                                        </ul>
+                                    </div>
+
+                                    {/* Fixed Apply Now Button */}
+                                    <div className="absolute bottom-4 left-0 w-full px-6">
+                                        <button
+                                            className="w-full py-3 bg-gradient-to-r from-teal-400 to-blue-600 text-white text-lg font-semibold rounded-lg hover:scale-105 transition"
+                                            onClick={() => navigate(`/jobs/${job._id}`)}
+                                        >
+                                            Apply Now 🚀
+                                        </button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
+
+
             </div>
         </section>
     );

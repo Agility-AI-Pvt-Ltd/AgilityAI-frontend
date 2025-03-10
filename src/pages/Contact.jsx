@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import axios from "axios";
 import { server } from '../main';
+import toast from 'react-hot-toast';
 
 
 const Contact = () => {
@@ -25,11 +26,17 @@ const Contact = () => {
     
         try {
             const response = await axios.post(`${server}/api/enquiry`, formData);
-            console.log("Response:", response.data);
-            alert("Application Submitted Successfully!");
+            // console.log("Response:", response.data);
+            toast.success("Application Submitted Successfully!");
+            setFormData({
+                name: "",
+                email: "",
+                company: "",
+                description: ""
+            });
         } catch (error) {
-            console.error("Error submitting application:", error);
-            alert("Failed to submit application.");
+            // console.error("Error submitting application:", error);
+            toast.error("Failed to submit application.");
         }
     };
 

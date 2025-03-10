@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { server } from "../main";
+import { useAuth } from "./AuthContext";
 
 const CourseContext = createContext();
 
@@ -8,6 +9,7 @@ export const CourseContextProvider = ({ children }) => {
   const [courses, setCourses] = useState([]);
   const [course, setCourse] = useState([]);
   const [mycourse, setMyCourse] = useState([]);
+  const { user } = useAuth();
 
 
   const fetchCourses = async () => {
@@ -35,7 +37,10 @@ export const CourseContextProvider = ({ children }) => {
 
   useEffect(() => {
     fetchCourses();
-    fetchMyCourse();
+
+    if (user) {
+      fetchMyCourse();
+    }
   }, [])
 
   const fetchCourse = async (id) => {
@@ -51,7 +56,7 @@ export const CourseContextProvider = ({ children }) => {
 
 
   return (
-    <CourseContext.Provider value={{ courses, fetchCourses, fetchCourse, course ,mycourse,fetchMyCourse }}>
+    <CourseContext.Provider value={{ courses, fetchCourses, fetchCourse, course, mycourse, fetchMyCourse }}>
       {children}
     </CourseContext.Provider>
   )

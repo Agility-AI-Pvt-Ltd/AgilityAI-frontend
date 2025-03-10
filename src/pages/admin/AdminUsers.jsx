@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { server } from '../../main';
 import AdminLayout from '../../components/Layout/AdminLayout';
+import toast from 'react-hot-toast';
 
 const AdminUsers = () => {
     const { user, role } = useAuth();
@@ -23,7 +24,7 @@ const AdminUsers = () => {
             });
             setUsers(data.admins);
         } catch (error) {
-            alert(error.response?.data?.message);
+            toast.success(error.response?.data?.message);
         }
     };
 
@@ -45,10 +46,10 @@ const AdminUsers = () => {
                 }
             );
 
-            alert(data.message);
+            toast.success(data.message);
             fetchUsers();
         } catch (error) {
-            alert(error.response?.data?.message || "Failed to update role");
+            toast.error(error.response?.data?.message || "Failed to update role");
         }
     };
 
@@ -62,10 +63,10 @@ const AdminUsers = () => {
                     },
                 });
 
-                alert(data.message);
+                toast.success(data.message);
                 await fetchUsers();
             } catch (error) {
-                alert(error.response?.data?.message);
+                toast.error(error.response?.data?.message);
             }
         }
     };

@@ -37,6 +37,9 @@ import AdminWebinar from "./pages/admin/AdminWebinar";
 import AdminWebinarListing from "./pages/admin/AdminWebinarListing";
 import AdminRecording from "./pages/admin/AdminRecording";
 import Projects from "./pages/Projects";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
+import Assignment from "./pages/Assignment";
 
 
 const App = () => {
@@ -109,6 +112,10 @@ const App = () => {
           element: token ? <Lecture /> : <Login />
         },
         {
+          path: "/assignments/:id",
+          element: token ? <Assignment/> : <Login />
+        },
+        {
           path: "/webinar/:ROOM_ID",
           element: <Webinar/>,
         },
@@ -126,6 +133,15 @@ const App = () => {
       path: "/register",
       element: <Register />
     },
+    {
+      path: "/forgot",
+      element: <ForgotPassword />
+    },
+    {
+      path: "/reset-password/:token",
+      element: <ResetPassword />
+    },
+    
     {
       path: "/termsofservice",
       element: <TermsOfService />

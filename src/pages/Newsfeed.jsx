@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Spinner from "../components/UI/Spinner";
 
 const API_KEY = "b3c9f896bfb8ae2c856d255a0d6e49b9"; // Replace with your GNews API key
 const API_URL = `https://gnews.io/api/v4/search?q=artificial+intelligence+AI+data+science&lang=en&max=50&token=${API_KEY}`;
@@ -48,7 +49,9 @@ const Newsfeed = () => {
             </header>
 
             {loading ? (
-                <p className="text-center text-white text-xl font-semibold">Loading news, please wait...</p>
+                <div className="flex flex-col items-center justify-center">
+                    <Spinner/>
+                </div>
             ) : (
                 <ul className="grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8">
                     {newsfeed.map((article, index) => (

@@ -6,6 +6,7 @@ import axios from 'axios';
 import { server } from '../../main';
 import AdminLayout from '../../components/Layout/AdminLayout';
 import { ProjectsData } from '../../context/ProjectContext';
+import toast from 'react-hot-toast';
 
 
 const AdminProjects = () => {
@@ -50,7 +51,7 @@ const AdminProjects = () => {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
             })
-            alert(data.message);
+            toast.success(data.message);
             setBtnLoading(false);
             await fetchProjects();
             setImage("");
@@ -59,7 +60,7 @@ const AdminProjects = () => {
             setLink("");
             setImagePrev("");
         } catch {
-            alert(error.response?.data?.message || "An error occurred");
+            toast.error(error.response?.data?.message || "An error occurred");
         }
     }
 

@@ -6,6 +6,7 @@ import { CourseData } from '../../context/CourseContext';
 import axios from 'axios';
 import { server } from '../../main';
 import AdminLayout from '../../components/Layout/AdminLayout';
+import toast from 'react-hot-toast';
 
 const AdminCourses = () => {
     const { user, role, token } = useAuth();
@@ -55,7 +56,7 @@ const AdminCourses = () => {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
             })
-            alert(data.message);
+            toast.success(data.message);
             setBtnLoading(false);
             await fetchCourses();
             setImage("");
@@ -67,7 +68,7 @@ const AdminCourses = () => {
             setPrice("");
             setCategory("");
         } catch {
-            alert(error.response.data.message);
+            toast.error(error.response.data.message);
         }
     }
 

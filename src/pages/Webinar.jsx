@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
 import { useParams } from "react-router-dom";
 
-const Webinar = () => {
+const Webinar = () => { 
     const APP_ID = 1907602911;
     const SERVER_SECRET = "6c996b4bf2e9601dc67930114653d538";
     const { ROOM_ID } = useParams();
@@ -24,7 +24,7 @@ const Webinar = () => {
             sharedLinks: [
                 {
                     name: "Copy link",
-                    url: `http://localhost:5173/webinar/${ROOM_ID}`,
+                    url: `${window.location.origin}/webinar/${ROOM_ID}`,
                 },
             ],
             scenario: {

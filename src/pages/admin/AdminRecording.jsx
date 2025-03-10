@@ -6,6 +6,7 @@ import axios from 'axios';
 import { server } from '../../main';
 import AdminLayout from '../../components/Layout/AdminLayout';
 import { WebinarsData } from '../../context/WebinarsContext';
+import toast from 'react-hot-toast';
 
 
 const AdminRecording = () => {
@@ -54,7 +55,7 @@ const AdminRecording = () => {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
             })
-            alert(data.message);
+            toast.success(data.message);
             setBtnLoading(false);
             await fetchRecordings();
             setImage("");
@@ -66,7 +67,7 @@ const AdminRecording = () => {
             setCreatedBy("");
         } catch {
 
-            alert(error.response?.data?.message || "An error occurred");
+            toast.error(error.response?.data?.message || "An error occurred");
 
         }
     }

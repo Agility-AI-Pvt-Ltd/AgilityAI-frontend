@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import Spinner from "../components/UI/Spinner";
 
 const Account = () => {
     const { user, token, role, fetchUser } = useAuth();
@@ -13,15 +14,19 @@ const Account = () => {
         } else {
             fetchUser(); // Fetch user details if authenticated
         }
-    }, [token, navigate, fetchUser]);
+    }, [token]);
 
     if (!user) {
-        return <div className="text-center text-white text-xl font-semibold">Loading...</div>;
+        return (
+            <div className="flex justify-center items-center min-h-screen">
+                <Spinner/>
+            </div>
+        );
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center">
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+        <div className="min-h-screen flex items-center justify-center ">
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md ">
                 <h1 className="text-2xl font-bold mb-6 text-center text-white">My Profile</h1>
                 <div className="space-y-4">
                     <div>
