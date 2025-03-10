@@ -1,9 +1,10 @@
 import ProjectCard from '../components/UI/ProjectCard';
 import { ProjectsData } from '../context/ProjectContext';
+import Spinner from '../components/UI/Spinner';
 
 const Projects = () => {
-    const { projects } = ProjectsData();
-    
+    const { projects, loading } = ProjectsData();
+
 
     return (
         <div className="max-w-7xl mx-auto pt-2 px-6 mt-12 min-h-screen">
@@ -15,12 +16,19 @@ const Projects = () => {
                 </span>
             </h2>
 
-            {/* Changed grid to flex for full-width cards */}
-            <div className="flex flex-wrap justify-center gap-9 mt-9">
-                {projects.map((project) => (
-                    <ProjectCard key={project._id} project={project} />
-                ))}
-            </div>
+            
+            {
+                loading ?
+                    <div className="flex justify-center items-center min-h-[200px]">
+                        <Spinner />
+                    </div> :
+                    <div className="flex flex-wrap justify-center gap-9 mt-9">
+                        {projects.map((project) => (
+                            <ProjectCard key={project._id} project={project} />
+                        ))}
+                    </div>
+            }
+
         </div>
     );
 };

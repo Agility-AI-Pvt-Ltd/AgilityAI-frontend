@@ -8,21 +8,31 @@ export const WebinarContextProvider = ({ children }) => {
   const [webinars, setWebinars] = useState([]);
   const [recordings, setRecordings] = useState([]);
 
+  const [webinarsloading , setWebinarsloading] = useState(false);
+  const [recordingsloading , setRecordingsloading] = useState(false);
+  
+
   const fetchWebinars = async () => {
+    setWebinarsloading(true);
     try {
       const { data } = await axios.get(`${server}/api/webinar/all`);
       setWebinars(data.webinars);
     } catch (error) {
       console.log(error);
+    } finally{
+      setWebinarsloading(false);
     }
   };
 
   const fetchRecordings = async () => {
+    setRecordingsloading(true);
     try {
       const { data } = await axios.get(`${server}/api/recording/all`);
       setRecordings(data.recordings);
     } catch (error) {
       console.log(error);
+    } finally{
+      setRecordingsloading(false);
     }
   };
 
@@ -32,7 +42,7 @@ export const WebinarContextProvider = ({ children }) => {
   }, []);
 
    return (
-    <WebinarsContext.Provider value={{ webinars, fetchWebinars, recordings , fetchRecordings }}>
+    <WebinarsContext.Provider value={{ webinars, fetchWebinars, recordings , fetchRecordings , webinarsloading, recordingsloading }}>
       {children}
     </WebinarsContext.Provider>
   );
