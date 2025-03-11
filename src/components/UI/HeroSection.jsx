@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Typewriter } from 'react-simple-typewriter';
+// import { Typewriter } from 'react-simple-typewriter';
 
 const HeroSection = () => {
     return (
@@ -19,16 +19,16 @@ const HeroSection = () => {
                     <div className="flex flex-col md:flex-row items-center justify-between">
                         {/* Left Side: Company Info */}
                         <div className="w-full md:w-1/2 mb-12 md:mb-0">
-                        <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight sm:leading-snug bg-gradient-to-r from-teal-200 to-white text-transparent bg-clip-text">
-                                Evolving<br/>Intelligence &<br />Innovation
+                            <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 leading-tight sm:leading-snug bg-gradient-to-r from-teal-200 to-white text-transparent bg-clip-text">
+                                Evolving<br />Intelligence &<br />Innovation
                             </h1>
-                            <p className="text-base sm:text-lg md:text-xl font-semibold text-white mb-8 tracking-wide">
-                                Empowering Businesses and Education with Cutting-Edge AI for a Digital Future.
+                            <p className="text-sm sm:text-base md:text-lg font-semibold text-white mb-8 tracking-wide">
+                                Cutting-Edge AI Transforming Businesses & <br />Education for a Future-Ready World
                             </p>
                             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                                 <Link
                                     to="/contact"
-                                    className="bg-gradient-to-r from-teal-400 to-blue-600 text-white font-semibold px-6 sm:px-8 py-3 rounded-full transition duration-300 transform hover:scale-105 hover:shadow-xl"
+                                    className="bg-gradient-to-r from-teal-400 to-blue-600 text-white font-semibold px-6 sm:px-8 py-3 rounded-full transition duration-300 transform hover:scale-105 hover:shadow-xl text-center"
                                 >
                                     Contact Us
                                 </Link>
@@ -42,10 +42,10 @@ const HeroSection = () => {
                         </div>
 
                         {/* Right Side: Features */}
-                        <div className="w-full md:w-1/2 md:pl-12">
-                            <div className="bg-white/10 backdrop-filter backdrop-blur-lg rounded-xl p-8 shadow-2xl">
-                                {/* Typewriter Effect for Heading */}
-                                <h2 className="text-xl sm:text-2xl font-semibold mb-6 text-white">
+                        {/* <div className="w-full md:w-1/2 md:pl-12"> */}
+                        {/* <div className="bg-white/10 backdrop-filter backdrop-blur-lg rounded-xl p-8 shadow-2xl"> */}
+                        {/* Typewriter Effect for Heading */}
+                        {/* <h2 className="text-xl sm:text-2xl font-semibold mb-6 text-white">
                                     <Typewriter
                                         words={['Why AgilityAI ?']}
                                         loop={0}
@@ -75,9 +75,9 @@ const HeroSection = () => {
                                         </svg>
                                         <span>AI Education & Upskilling</span>
                                     </li>
-                                </ul>
-                            </div>
-                        </div>
+                                </ul> */}
+                        {/* </div> */}
+                        {/* </div> */}
                     </div>
                 </div>
             </section>
