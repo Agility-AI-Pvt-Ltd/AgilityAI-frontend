@@ -6,12 +6,12 @@ const Home = () => {
   return (
     <>
       <HeroSection />
-      {/* 1st section  */}
+      
       <section className="py-24 text-white relative">
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
           <div className="w-full grid lg:grid-cols-2 grid-cols-1 items-center gap-12">
 
-            {/* Text Content */}
+            
             <div className="w-full flex flex-col gap-8">
               <h2 className="text-[#F5FCE1] text-3xl sm:text-4xl lg:text-5xl font-bold leading-normal lg:text-start text-center">
                 Who we are?
@@ -24,7 +24,7 @@ const Home = () => {
               </p>
             </div>
 
-            {/* Image Section */}
+            
             <div className="w-full flex justify-center lg:justify-start">
               <div className="w-full max-w-[500px] sm:max-w-[550px] h-auto rounded-3xl border border-gray-700 overflow-hidden">
                 <img
@@ -40,13 +40,9 @@ const Home = () => {
       </section>
 
 
-      {/* new */}
+      
       <section className="py-16 text-white ">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
-
-
-
-          {/* Video Section */}
           <div className="flex justify-center">
             <video
               className="w-full max-w-xl h-auto rounded-lg shadow-2xl  transition-shadow duration-500 ease-in-out"
@@ -59,7 +55,7 @@ const Home = () => {
             </video>
           </div>
 
-          {/* Text Content */}
+          
           <div className="p-6 rounded-lg  ">
             <h2 className="text-[#F5FCE1] text-3xl sm:text-4xl lg:text-5xl font-bold font-manrope leading-normal lg:text-start text-center">
             Our Impact
@@ -89,12 +85,12 @@ const Home = () => {
 
 
 
-      {/* why agility ai */}
+      
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col-reverse lg:flex-row items-center gap-8">
 
-            {/* Image Section (Always Below on Small Screens) */}
+            
             <div className="flex justify-center lg:w-1/2">
               <img
                 src="https://plus.unsplash.com/premium_photo-1661329955912-ebc4279f3b21?w=800&auto=format&fit=crop&q=60"
@@ -103,7 +99,7 @@ const Home = () => {
               />
             </div>
 
-            {/* Text Section (Always First) */}
+            
             <div className="max-w-2xl lg:w-1/2">
             <h2 className="text-[#F5FCE1] text-3xl sm:text-4xl lg:text-5xl font-bold font-manrope leading-normal lg:text-start text-center">
                 Why choose AgilityAI?
@@ -137,7 +133,7 @@ const Home = () => {
 
 
       <section className="relative py-20 text-white text-center overflow-hidden">
-        {/* Animated Background Glow */}
+        
         <div className="absolute inset-0 opacity-10 blur-3xl"></div>
 
         <div className="relative container mx-auto px-6">
@@ -168,7 +164,7 @@ const Home = () => {
             </span>
           </p>
 
-          {/* Call to Action */}
+          
           <div className="mt-8">
             <Link
               to="/contact" onClick={() => window.scrollTo(0, 0)}
