@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "../../assets/logo.jpg";
+import logo from "/new_logo.jpg";
 import React from 'react';
 import { navItems } from "../../constants";
 import { NavLink, useNavigate } from "react-router-dom"; // Import useNavigate
