@@ -31,7 +31,7 @@ const HeroSection = () => {
                             </h1>
 
                             <p className="text-base min-[375px]:text-lg sm:text-lg md:text-xl lg:text-2xl font-medium text-white brightness-200 drop-shadow-lg mix-blend-screen mb-6 sm:mb-8 tracking-wide">
-                                Built for What’s Next<br />Fast and Adaptable
+                                Built for What’s Next,<br />Fast and Adaptable
                             </p>
 
                             <div className="flex flex-row flex-wrap justify-center md:justify-start space-y-0 sm:space-x-4 gap-4">

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 const Register = () => {
     const [username, setUsername] = useState("");
@@ -114,7 +115,14 @@ const Register = () => {
                         {btnLoading ? "Please wait..." : "Send OTP"}
                     </button>
                 )}
+                <p className="mt-4 text-center">
+                    Already have an account?{" "}
+                    <Link to="/login" className="text-blue-500 hover:underline">
+                        Login here
+                    </Link>
+                </p>
             </form>
+
         </div>
     );
 };

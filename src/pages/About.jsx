@@ -69,7 +69,7 @@ const About = () => {
               <h2 className="text-[#F5FCE1] text-3xl sm:text-4xl lg:text-5xl font-bold font-manrope leading-tight lg:text-start text-center">
                 Our Mission
               </h2>
-              <p className="text-gray-300 text-lg font-light mt-6 leading-relaxed lg:text-start text-center">
+              <p className="text-gray-300 text-lg font-light mt-6 leading-relaxed lg:text-start ">
               Agility AI began as a bold idea and has since evolved into a movement dedicated to empowering businesses and individuals alike. We specialize in:
               </p>
               <ul className="text-gray-300 space-y-3 mt-4">
@@ -117,7 +117,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div>
-            <h2 className="text-[#F5FCE1] text-3xl sm:text-4xl lg:text-5xl font-bold font-manrope leading-normal lg:text-start text-center">
+            <h2 className="text-[#F5FCE1] text-3xl sm:text-4xl lg:text-5xl font-bold font-manrope leading-normal lg:text-start text-center mb-3">
               How Will AI Redefine the Industries?
             </h2>
             <p className="text-gray-300 text-lg mb-6">
@@ -127,20 +127,20 @@ const About = () => {
             {/* Stats Section */}
             <div className="grid grid-cols-2 gap-6 mt-6">
               <div className="p-4 bg-gray-800 rounded-lg text-center">
-                <h4 className="text-3xl font-bold text-white">$1.85 T</h4>
-                <p className="text-gray-400">AI market(by 2030)</p>
+                <h4 className="text-2xl sm:text-3xl font-semibold md:font-bold text-white">$1.85T</h4>
+                <p className="text-gray-400">AI market(2030)</p>
               </div>
               <div className="p-4 bg-gray-800 rounded-lg text-center">
-                <h4 className="text-3xl font-bold text-white">77% </h4>
+              <h4 className="text-2xl sm:text-3xl font-semibold md:font-bold text-white">77% </h4>
                 <p className="text-gray-400">Businesses exploring AI</p>
               </div>
               <div className="p-4 bg-gray-800 rounded-lg text-center">
-                <h4 className="text-3xl font-bold text-white">97 M </h4>
-                <p className="text-gray-400">New Job Roles</p>
+              <h4 className="text-2xl sm:text-3xl font-semibold md:font-bold text-white">97 M </h4>
+                <p className="text-gray-400">Emerging Job Roles</p>
               </div>
               <div className="p-4 bg-gray-800 rounded-lg text-center">
-                <h4 className="text-3xl font-bold text-white">85 M</h4>
-                <p className="text-gray-400">Job Losses</p>
+              <h4 className="text-2xl sm:text-3xl font-semibold md:font-bold text-white">85 M</h4>
+                <p className="text-gray-400">Projected Job Losses</p>
               </div>
             </div>
           </div>

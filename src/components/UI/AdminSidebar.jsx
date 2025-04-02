@@ -56,8 +56,7 @@ const AdminSidebar = () => {
         </nav>
 
         {/* Logout Button */}
-        {user && (
-          isOpen ? (
+        {isOpen ? (
 
           <button
             onClick={handleLogout}
@@ -66,7 +65,7 @@ const AdminSidebar = () => {
             Logout
           </button>
           ) : <LogOut size={20} className="mt-4"/>
-        )}
+        }
       </div>
     </div>
   );
