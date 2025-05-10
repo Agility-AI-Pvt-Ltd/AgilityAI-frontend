@@ -12,7 +12,7 @@ const Projects = () => {
             <h2 className="text-4xl sm:text-5xl lg:text-6xl text-center mt-3 tracking-wide">
                 Our{" "}
                 <span className="bg-gradient-to-r from-blue-300 to-blue-600 text-transparent bg-clip-text">
-                    Projects
+                    Offerings
                 </span>
             </h2>
 
