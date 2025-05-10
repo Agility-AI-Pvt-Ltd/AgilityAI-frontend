@@ -11,7 +11,7 @@ import { Move , University , ShieldCheck , Rocket } from "lucide-react";
 
 export const navItems = [
   { label: "About Us", href: "/about" },
-  { label: "Our Projects", href: "/projects" },
+  { label: "Offerings", href: "/projects" },
   { label: "Services", href: "/services" },
   { label: "Careers", href: "/careers" },
   { label: "AI Insights", href: "/newsfeed" },
