@@ -33,7 +33,7 @@ const ProjectCard = ({ project }) => {
       {/* Image Section */}
       <div className="w-full md:w-[40%] flex-shrink-0 overflow-hidden">
         <img
-          src={`${server}/${project.image}`}
+          src={`${project.image}`}
           alt="Project Cover"
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
         />
