@@ -30,7 +30,7 @@ const CourseCard = ({ course }) => {
     return (
         <div className="bg-gray-800 shadow-md hover:shadow-2xl hover:scale-105 transition-transform duration-300 p-5 rounded-lg text-center w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
             <img
-                src={`${server}/${course.image}`}
+                src={`${course.image}`}
                 alt={course.title}
                 className="w-full h-40 object-cover rounded-lg mb-4"
             />
