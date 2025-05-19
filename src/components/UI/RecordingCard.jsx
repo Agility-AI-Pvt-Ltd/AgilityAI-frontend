@@ -39,7 +39,7 @@ const WebinarCard = ({ recording }) => {
             {/* Recording Image */}
             <div className="relative h-48 w-full">
                 <img
-                    src={`${server}/${recording.image}`}
+                    src={`${recording.image}`}
                     alt={recording.title}
                     className="w-full h-full object-cover rounded-lg shadow-md"
                 />
