@@ -100,7 +100,7 @@ const CourseDescription = ({ user }) => {
                   {/* Course Header Section */}
                   <div className="course-header flex flex-col md:flex-row items-center gap-6">
                     <img
-                      src={`${server}/${course.image}`}
+                      src={`${course.image}`}
                       alt="course"
                       className="course-image w-48 h-36 object-cover rounded-lg"
                     />
