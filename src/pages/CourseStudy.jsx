@@ -32,7 +32,7 @@ const CourseStudy = () => {
           </div>
         )}
         <img
-          src={`${server}/${course.image}`}
+          src={`${course.image}`}
           alt={course.title}
           width={350}
           height={200} 
