@@ -129,7 +129,7 @@ const Lecture = () => {
                                     </h1>
                                     <div className="relative overflow-hidden rounded-lg shadow-lg">
                                         <video
-                                            src={`${server}/${lecture.video}`}
+                                            src={`${lecture.video}`}
                                             className="w-full rounded-lg border-2 border-gray-700 shadow-lg transition-transform duration-300"
                                             controlsList="nodownload noremoteplayback"
                                             disablePictureInPicture
