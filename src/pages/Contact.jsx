@@ -7,10 +7,10 @@ import toast from 'react-hot-toast';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
-            name: "",
-            email: "",
-            company: "",
-            description: "" 
+        name: "",
+        email: "",
+        company: "",
+        description: ""
     });
 
     const handleChange = (e) => {
@@ -21,9 +21,9 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-    
+
         // console.log("Form Data:", formData);
-    
+
         try {
             const response = await axios.post(`${server}/api/enquiry`, formData);
             // console.log("Response:", response.data);
@@ -40,7 +40,7 @@ const Contact = () => {
         }
     };
 
-    
+
     return (
         <div className="max-w-7xl mx-auto pt-10 pb-8 px-6">
             <section className="bg-transparent border border-neutral-600 p-6 rounded-lg" id="contact">
@@ -50,7 +50,7 @@ const Contact = () => {
                             <h2 className="text-4xl sm:text-5xl lg:text-6xl text-center mt-6 tracking-wide">
                                 Get{" "}
                                 <span className="bg-gradient-to-r from-blue-300 to-blue-600 text-transparent bg-clip-text">
-                                in Touch
+                                    in Touch
                                 </span>
                             </h2>
 
@@ -89,8 +89,8 @@ const Contact = () => {
                                         </div>
                                         <div className="ml-4 mb-4">
                                             <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Contact</h3>
-                                            <p className="text-gray-600 dark:text-gray-300">Mobile: +1 (123) 456-7890</p>
-                                            <p className="text-gray-600 dark:text-gray-300">Mail: tailnext@gmail.com</p>
+                                            <p className="text-gray-600 dark:text-gray-300">Mobile: +91-7042149608</p>
+                                            <p className="text-gray-600 dark:text-gray-300">Mail: service@agilityai.in</p>
                                         </div>
                                     </li>
                                     <li className="flex">
@@ -102,8 +102,8 @@ const Contact = () => {
                                         </div>
                                         <div className="ml-4 mb-4">
                                             <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Working hours</h3>
-                                            <p className="text-gray-600 dark:text-gray-300">Monday - Friday: 08:00 - 17:00</p>
-                                            <p className="text-gray-600 dark:text-gray-300">Saturday & Sunday: 08:00 - 12:00</p>
+                                            <p className="text-gray-600 dark:text-gray-300">Monday - Friday: 10:00AM - 7:00PM</p>
+                                            {/* <p className="text-gray-600 dark:text-gray-300">Saturday & Sunday: 08:00 - 12:00</p> */}
                                         </div>
                                     </li>
                                 </ul>
@@ -115,47 +115,47 @@ const Contact = () => {
                                         <div className="mx-0 mb-1 sm:mb-4">
                                             <label htmlFor="name" className="pb-1 text-xs uppercase tracking-wider"></label>
                                             <input type="text"
-                                             id="name"
-                                             value={formData.name}
-                                             onChange={handleChange}
-                                             autoComplete="given-name" 
-                                             placeholder="Your name" 
-                                             className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0" 
-                                             name="name" 
-                                             required/>
+                                                id="name"
+                                                value={formData.name}
+                                                onChange={handleChange}
+                                                autoComplete="given-name"
+                                                placeholder="Your name"
+                                                className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                                                name="name"
+                                                required />
                                         </div>
                                         <div className="mx-0 mb-1 sm:mb-4">
                                             <label htmlFor="email" className="pb-1 text-xs uppercase tracking-wider"></label>
                                             <input type="email"
-                                            id="email"
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                            autoComplete="email" 
-                                            placeholder="Your email address"
-                                            className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                                            name="email"
-                                            required/>
+                                                id="email"
+                                                value={formData.email}
+                                                onChange={handleChange}
+                                                autoComplete="email"
+                                                placeholder="Your email address"
+                                                className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                                                name="email"
+                                                required />
                                         </div>
                                         <div className="mx-0 mb-1 sm:mb-4">
                                             <label htmlFor="company" className="pb-1 text-xs uppercase tracking-wider"></label>
                                             <input type="text"
-                                             id="company" value={formData.company}
-                                              onChange={handleChange}
-                                               autoComplete="given-company" 
-                                               placeholder="Your company" 
-                                               className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                                               name="company"
-                                               required/>
+                                                id="company" value={formData.company}
+                                                onChange={handleChange}
+                                                autoComplete="given-company"
+                                                placeholder="Your company"
+                                                className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                                                name="company"
+                                                required />
                                         </div>
                                         <div className="mx-0 mb-1 sm:mb-4">
                                             <label htmlFor="textarea" className="pb-1 text-xs uppercase tracking-wider"></label>
                                             <textarea id="textarea"
-                                               name="description"
-                                               value={formData.description}
-                                               onChange={handleChange} 
-                                               cols="30" rows="5" 
-                                               placeholder="How can we help ?" 
-                                               className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"></textarea>
+                                                name="description"
+                                                value={formData.description}
+                                                onChange={handleChange}
+                                                cols="30" rows="5"
+                                                placeholder="How can we help ?"
+                                                className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"></textarea>
                                         </div>
                                     </div>
                                     <div className="text-center">
