@@ -14,7 +14,6 @@
     "@splinetool/runtime": "^1.9.79",
     "@tailwindcss/vite": "^4.0.6",
     "@zegocloud/zego-uikit-prebuilt": "^2.14.1",
- 
     "axios": "^1.7.9",
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
@@ -25,8 +24,8 @@
     "react-router-dom": "^7.1.5",
     "react-simple-typewriter": "^5.0.1",
     "react-typewriter-effect": "^1.1.0",
+    "swiper": "^11.2.10",
     "tailwindcss": "^4.0.6",
-    
     "zego-express-engine-webrtc": "^3.8.0"
   },
   "devDependencies": {

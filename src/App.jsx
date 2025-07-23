@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AppLayout } from "./components/Layout/AppLayout";
 
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Services from "./pages/Services"
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
 import JobDetails from "./pages/JobDetails";
@@ -13,8 +13,6 @@ import TermsOfService from "./pages/TermsOfService";
 import Policy from "./pages/Policy";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-
-
 
 import Account from "./pages/Account";
 import Courses from "./pages/Courses";
@@ -40,7 +38,7 @@ import Projects from "./pages/Projects";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import Assignment from "./pages/Assignment";
-
+import AdvisoryBoard from "./pages/AdvisoryBoard";
 
 const App = () => {
   const { token, user } = useAuth();
@@ -58,6 +56,10 @@ const App = () => {
         {
           path: "about",
           element: <About />,
+        },
+        {
+          path: "advisory-board",
+          element: <AdvisoryBoard />,
         },
         {
           path: "services",
@@ -85,110 +87,110 @@ const App = () => {
         },
         {
           path: "/account",
-          element: <Account />
+          element: <Account />,
         },
         {
           path: "/courses",
-          element: <Courses />
+          element: <Courses />,
         },
         {
           path: "/course/:id",
-          element: token ? <CourseDescription user={user} /> : <Login />
+          element: token ? <CourseDescription user={user} /> : <Login />,
         },
         {
           path: "/payment-success/:id",
-          element: token ? <PaymentSuccess /> : <Login />
+          element: token ? <PaymentSuccess /> : <Login />,
         },
         {
           path: "/:id/dashboard",
-          element: token ? <Dashboard /> : <Login />
+          element: token ? <Dashboard /> : <Login />,
         },
         {
           path: "/course/study/:id",
-          element: token ? <CourseStudy /> : <Login />
+          element: token ? <CourseStudy /> : <Login />,
         },
         {
           path: "/lectures/:id",
-          element: token ? <Lecture /> : <Login />
+          element: token ? <Lecture /> : <Login />,
         },
         {
           path: "/assignments/:id",
-          element: token ? <Assignment/> : <Login />
+          element: token ? <Assignment /> : <Login />,
         },
         {
           path: "/webinar/:ROOM_ID",
-          element: <Webinar/>,
+          element: <Webinar />,
         },
         {
           path: "/projects",
-          element: <Projects/>,
+          element: <Projects />,
         },
       ],
     },
     {
       path: "/login",
-      element: <Login />
+      element: <Login />,
     },
     {
       path: "/register",
-      element: <Register />
+      element: <Register />,
     },
     {
       path: "/forgot",
-      element: <ForgotPassword />
+      element: <ForgotPassword />,
     },
     {
       path: "/reset-password/:token",
-      element: <ResetPassword />
+      element: <ResetPassword />,
     },
-    
+
     {
       path: "/termsofservice",
-      element: <TermsOfService />
+      element: <TermsOfService />,
     },
     {
       path: "/policy",
-      element: <Policy />
+      element: <Policy />,
     },
     {
       path: "/admin/dashboard",
-      element: token ? <AdminDashboard /> : <Login />
+      element: token ? <AdminDashboard /> : <Login />,
     },
     {
       path: "/admin/course",
-      element: token ? <AdminCourses /> : <Login />
+      element: token ? <AdminCourses /> : <Login />,
     },
     {
       path: "/admin/users",
-      element: token ? <AdminUsers /> : <Login />
+      element: token ? <AdminUsers /> : <Login />,
     },
     {
       path: "/admin/enquiries",
-      element: token ? <AdminEnquiries/> : <Login />
+      element: token ? <AdminEnquiries /> : <Login />,
     },
     {
       path: "/admin/joblistings",
-      element: token ? <AdminJobListings/> : <Login />
+      element: token ? <AdminJobListings /> : <Login />,
     },
     {
       path: "/admin/jobapplications",
-      element: token ? <AdminJobApplications/> : <Login />
+      element: token ? <AdminJobApplications /> : <Login />,
     },
     {
       path: "/admin/webinarlisting",
-      element: token ? <AdminWebinarListing/> : <Login />
+      element: token ? <AdminWebinarListing /> : <Login />,
     },
     {
       path: "/admin/recordings",
-      element: token ? <AdminRecording/> : <Login/>
+      element: token ? <AdminRecording /> : <Login />,
     },
     {
       path: "/admin/projects",
-      element: token ? <AdminProjects/> : <Login/>
+      element: token ? <AdminProjects /> : <Login />,
     },
     {
       path: "/admin/webinar/:ROOM_ID",
-      element:  token ? <AdminWebinar/> : <Login/>
+      element: token ? <AdminWebinar /> : <Login />,
     },
   ]);
 
@@ -196,7 +198,3 @@ const App = () => {
 };
 
 export default App;
-
-
-
-
