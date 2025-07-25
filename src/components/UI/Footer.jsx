@@ -1,22 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const [showAboutDropdown, setShowAboutDropdown] = useState(false);
   return (
     <footer>
       <div className="bg-gray-800 py-4 text-[#F5FCE1] mt-10">
         <div className="container px-4 mx-auto">
           <div className="-mx-4 flex flex-wrap justify-between">
-            <div className="px-4 my-4 w-full sm:w-auto">
+            <div className="px-4 my-4 w-full sm:w-auto xl:w-1/5">
               <h2 className="text-2xl pb-4 mb-4 border-b-4 border-teal-400">
                 Company
               </h2>
               <ul className="leading-8">
+                {/* About Us with Toggle Dropdown */}
                 <li>
-                  <Link to="/about" className="hover:text-blue-400">
+                  <button
+                    onClick={() => setShowAboutDropdown((prev) => !prev)}
+                    className="hover:text-blue-400 focus:outline-none text-left w-full"
+                  >
                     About Us
-                  </Link>
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${
+                      showAboutDropdown
+                        ? "max-h-40 opacity-100"
+                        : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <ul className="ml-4 mt-2 space-y-1">
+                      <li>
+                        <Link
+                          to="/about/company"
+                          className="block hover:text-blue-300"
+                        >
+                          About Company
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/about/founders"
+                          className="block hover:text-blue-300"
+                        >
+                          About Founders
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/about/advisory"
+                          className="block hover:text-blue-300"
+                        >
+                          Advisory Board
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
+
+                {/* Other Links */}
                 <li>
                   <Link to="/contact" className="hover:text-blue-400">
                     Contact Us
@@ -33,13 +74,8 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="privacy-policy" className="hover:text-blue-400">
+                  <Link to="/privacy-policy" className="hover:text-blue-400">
                     Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link to="advisory-board" className="hover:text-blue-400">
-                    Advisory Board
                   </Link>
                 </li>
               </ul>

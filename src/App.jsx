@@ -39,6 +39,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import Assignment from "./pages/Assignment";
 import AdvisoryBoard from "./pages/AdvisoryBoard";
+import Founders from "./pages/Founders";
 
 const App = () => {
   const { token, user } = useAuth();
@@ -54,12 +55,16 @@ const App = () => {
           element: <Home />,
         },
         {
-          path: "about",
+          path: "about/company",
           element: <About />,
         },
         {
-          path: "advisory-board",
+          path: "/about/advisory-board",
           element: <AdvisoryBoard />,
+        },
+        {
+          path: "about/founders",
+          element: <Founders />,
         },
         {
           path: "services",
