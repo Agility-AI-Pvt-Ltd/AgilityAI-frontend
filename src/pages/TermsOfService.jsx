@@ -1,95 +1,208 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
 
 const TermsOfService = () => {
-    return (
-        <div className="bg-gray-50 min-h-screen">
-            <div className="max-w-4xl mx-auto px-4 py-16">
-                <div className="bg-white rounded-2xl shadow-xl p-8">
-                    <h1 className="text-3xl font-bold text-gray-900 mb-8">Terms of Service</h1>
+  return (
+    <div className="min-h-screen">
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-40 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl"></div>
+      </div>
 
-                    <section className="mb-8">
-                        <h2 className="text-xl font-semibold text-gray-800 mb-4">1. Acceptance of Terms</h2>
-                        <div className="prose text-gray-600">
-                            <p>By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.</p>
-                        </div>
-                    </section>
-
-                    <section className="mb-8">
-                        <h2 className="text-xl font-semibold text-gray-800 mb-4">2. Use License</h2>
-                        <div className="bg-gray-50 rounded-lg p-6">
-                            <ul className="space-y-4 text-gray-600">
-                                <li className="flex gap-3">
-                                    <svg className="h-6 w-6 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span>Permission is granted to temporarily download one copy of the materials for personal, non-commercial transitory viewing only.</span>
-                                </li>
-                                <li className="flex gap-3">
-                                    <svg className="h-6 w-6 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    <span>This is the grant of a license, not a transfer of title.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section className="mb-8">
-                        <h2 className="text-xl font-semibold text-gray-800 mb-4">3. Disclaimer</h2>
-                        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
-                            <div className="flex">
-                                <div className="flex-shrink-0">
-                                    <svg className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                                    </svg>
-                                </div>
-                                <div className="ml-3">
-                                    <p className="text-sm text-yellow-700">
-                                        The materials on this website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section className="mb-8">
-                        <h2 className="text-xl font-semibold text-gray-800 mb-4">4. Limitations</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="bg-gray-50 p-6 rounded-lg">
-                                <h3 className="font-medium text-gray-900 mb-2">Time Limitations</h3>
-                                <p className="text-gray-600">Claims must be filed within 30 days of incident.</p>
-                            </div>
-                            <div className="bg-gray-50 p-6 rounded-lg">
-                                <h3 className="font-medium text-gray-900 mb-2">Liability</h3>
-                                <p className="text-gray-600">We shall not be held liable for any damages.</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section className="mb-8">
-                        <h2 className="text-xl font-semibold text-gray-800 mb-4">5. Revisions</h2>
-                        <div className="prose text-gray-600">
-                            <p>We may revise these terms of service at any time without notice. By using this website you are agreeing to be bound by the current version of these terms of service.</p>
-                        </div>
-                    </section>
-
-                    <section>
-                        <h2 className="text-xl font-semibold text-gray-800 mb-4">6. Contact</h2>
-                        <div className="bg-gray-50 rounded-lg p-6 flex items-center justify-between">
-                            <p className="text-gray-600">Questions about the Terms of Service?</p>
-                            <Link to="mailto:legal@example.com" className="inline-flex items-center text-blue-600 hover:text-blue-500">
-                                <svg className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
-                                Contact Us
-                            </Link>
-                        </div>
-                    </section>
-                </div>
-            </div>
+      <div className="relative max-w-6xl mx-auto px-6 py-12">
+        {/* Page Heading */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl mb-6">
+            Terms of{" "}
+            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 text-transparent bg-clip-text">
+              Service
+            </span>
+          </h1>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full"></div>
         </div>
-    );
+
+        {/* Effective Date and Intro */}
+        <section className="mb-20">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 shadow-2xl">
+              <div className="flex items-center gap-2 mb-6">
+                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                <p className="text-green-400 font-semibold text-sm uppercase tracking-wider">
+                  Effective Date: 27 July 2025
+                </p>
+              </div>
+              <p className="text-gray-300 text-xl leading-relaxed">
+                Welcome to{" "}
+                <span className="text-blue-400 font-bold">AgilityAI</span>. By
+                accessing or using our website or services, you agree to be
+                bound by the following Terms of Service. Please read them
+                carefully before proceeding.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Terms Sections */}
+        <section className="space-y-8 max-w-5xl mx-auto">
+          {[
+            {
+              title: "1. Use of Our Platform",
+              icon: "🖥️",
+              content: [
+                "You may use our platform only if you are 16 years or older and legally capable of entering into a contract.",
+                "You agree to use the platform in accordance with these Terms and all applicable laws and regulations.",
+              ],
+            },
+            {
+              title: "2. Account Registration",
+              icon: "👤",
+              content: [
+                "Certain features may require you to create an account. You are responsible for maintaining the confidentiality of your login credentials and all activities under your account.",
+                "You agree to provide accurate and complete information and to update it as needed.",
+              ],
+            },
+            {
+              title: "3. Services and Access",
+              icon: "🔧",
+              content: [
+                "We provide access to technology-related services and tools. We may add, modify, or remove features at our discretion.",
+                "We do not guarantee uninterrupted or error-free access, though we strive to maintain uptime and performance.",
+              ],
+            },
+            {
+              title: "4. User Conduct",
+              icon: "⚖️",
+              content: [
+                "You agree not to:",
+                "• Use the platform for illegal, abusive, or harmful purposes",
+                "• Upload or share content that is offensive, defamatory, or infringes on any third-party rights",
+                "• Attempt to disrupt or interfere with the platform's functioning",
+              ],
+            },
+            {
+              title: "5. Intellectual Property",
+              icon: "🛡️",
+              content: [
+                "All content, design elements, logos, and software on our platform are the intellectual property of AgilityAI or its partners.",
+                "You may not copy, distribute, or reproduce any part of the platform without written permission.",
+              ],
+            },
+            {
+              title: "6. Payments",
+              icon: "💳",
+              content: [
+                "Any fees for paid services will be clearly communicated. You agree to pay applicable charges as per the plan or service selected.",
+                "Failure to make timely payments may result in suspension or termination of services.",
+              ],
+            },
+            {
+              title: "7. Termination",
+              icon: "🚪",
+              content: [
+                "You may stop using our services as per the agreement.",
+                "We reserve the right to suspend or terminate your access if we believe you have violated these Terms or any applicable law.",
+              ],
+            },
+            {
+              title: "8. Disclaimers",
+              icon: "⚠️",
+              content: [
+                'The platform and services are provided "as is" and "as available."',
+              ],
+            },
+            {
+              title: "9. Limitation of Liability",
+              icon: "🔒",
+              content: [
+                "To the fullest extent permitted by law, we are not liable for any indirect, incidental, or consequential damages arising from your use of the platform.",
+                "Our total liability for any claim shall not exceed the amount you paid us in the last 6 months (if any).",
+              ],
+            },
+            {
+              title: "10. Indemnity",
+              icon: "🤝",
+              content: [
+                "You agree to indemnify and hold harmless AgilityAI, its team, and affiliates against any claims, damages, or expenses arising from your use of the platform or violation of these Terms.",
+              ],
+            },
+            {
+              title: "11. Changes to Terms",
+              icon: "📝",
+              content: [
+                "We may update these Terms from time to time. We will notify users by posting the revised version on our site. Continued use after changes means you accept the updated Terms.",
+              ],
+            },
+            {
+              title: "12. Governing Law",
+              icon: "🏛️",
+              content: [
+                "These Terms shall be governed by and interpreted in accordance with the laws of India. Any disputes will be subject to the exclusive jurisdiction of the courts of India.",
+              ],
+            },
+            {
+              title: "13. Contact Us",
+              icon: "📧",
+              content: [
+                "If you have any questions or concerns about these Terms, please reach out to us at: ",
+                <a
+                  key="contact-email"
+                  href="mailto:contact@agilityai.in"
+                  className="text-blue-400 hover:text-cyan-400 underline transition-colors duration-200 font-semibold"
+                >
+                  contact@agilityai.in
+                </a>,
+              ],
+            },
+          ].map((section, idx) => (
+            <div
+              key={idx}
+              className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:bg-white/8 transition-all duration-300 hover:border-white/20"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="text-3xl bg-gradient-to-br from-blue-400 to-cyan-400 p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  {section.icon}
+                </div>
+                <h2 className="text-2xl lg:text-3xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+                  {section.title}
+                </h2>
+              </div>
+              <div className="space-y-3 pl-16">
+                {section.content.map((line, i) => (
+                  <p
+                    key={i}
+                    className="text-gray-300 text-lg leading-relaxed hover:text-gray-200 transition-colors duration-200"
+                  >
+                    {line}
+                  </p>
+                ))}
+              </div>
+              <div className="mt-6 w-full h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent"></div>
+            </div>
+          ))}
+        </section>
+
+        {/* Footer CTA */}
+        <section className="mt-20 text-center">
+          <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm border border-blue-400/20 rounded-2xl p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Questions about our Terms?
+            </h3>
+            <p className="text-gray-300 mb-6">
+              We&#39;re here to help clarify anything you need to know.
+            </p>
+            <a
+              href="mailto:contact@agilityai.in"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              <span>Get in Touch</span>
+              <span className="text-xl">→</span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
 };
 
 export default TermsOfService;

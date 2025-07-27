@@ -130,6 +130,15 @@ const App = () => {
           path: "/projects",
           element: <Projects />,
         },
+
+        {
+          path: "/termsofservice",
+          element: <TermsOfService />,
+        },
+        {
+          path: "/privacy-policy",
+          element: <Policy />,
+        },
       ],
     },
     {
@@ -147,15 +156,6 @@ const App = () => {
     {
       path: "/reset-password/:token",
       element: <ResetPassword />,
-    },
-
-    {
-      path: "/termsofservice",
-      element: <TermsOfService />,
-    },
-    {
-      path: "/policy",
-      element: <Policy />,
     },
     {
       path: "/admin/dashboard",
