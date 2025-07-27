@@ -47,7 +47,7 @@ const Footer = () => {
                       </li>
                       <li>
                         <Link
-                          to="/about/advisory"
+                          to="/about/advisory-board"
                           className="block hover:text-blue-300"
                         >
                           Advisory Board

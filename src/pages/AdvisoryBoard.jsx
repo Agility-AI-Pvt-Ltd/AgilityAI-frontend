@@ -11,9 +11,9 @@ const testimonials = [
   },
   {
     quote:
-      "Assistant Professor at IRMA. Consultant to various government departments for over a decade.",
+      "Assistant Professor at IRMA and PhD from IIM Ahmedabad. Consultant to various government departments for over a decade.",
     name: "Prof. Aashish Argade",
-    designation: "PhD from IIM Ahmedabad",
+    designation: "",
     src: "/advisory/aashish-argade.jpeg",
   },
   {
@@ -28,7 +28,7 @@ const testimonials = [
       "Vice-Chancellor, NUSRL, Ranchi. Chair Professor, Chair of Consumer Law and Practice, NLSIU.",
     name: "Prof. (Dr.) Ashok R. Patil",
     designation: "",
-    src: "/advisory/Prof_Ashok_R_Patil.jpg",
+    src: "/advisory/prof_ashok_r_patil.png",
   },
   {
     quote:

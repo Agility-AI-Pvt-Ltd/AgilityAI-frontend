@@ -80,23 +80,46 @@ const Services = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-[#1e293b] p-6 rounded-lg shadow-md transition duration-300 hover:bg-gradient-to-r hover:from-blue-900 hover:to-blue-500 hover:scale-[1.03]"
+              className="group bg-[#1e293b] rounded-xl shadow-lg overflow-hidden transition duration-300 hover:bg-gradient-to-r hover:from-blue-900 hover:to-blue-500 hover:scale-[1.03]"
             >
-              <h3 className="text-xl font-semibold text-white">
-                {project.title}
-              </h3>
-              <p className="text-gray-300 mt-2">{project.description}</p>
+              {/* Header Section */}
+              <div className="bg-gradient-to-r from-blue-600 to-blue-400 px-6 py-4 flex items-center gap-4">
+                {index === 0 && (
+                  <img
+                    src="/fairlySettledLogo.jpg"
+                    alt="Fairly Settled Logo"
+                    className="h-16 w-16 object-contain rounded-xl shadow-md"
+                  />
+                )}
+                {index === 1 && (
+                  <img
+                    src="/EduManiaxLogo.png"
+                    alt="EduManiax Logo"
+                    className="h-16 w-16 object-contain rounded-xl shadow-md"
+                  />
+                )}
+                <h3 className="text-xl sm:text-2xl font-bold text-white tracking-wide drop-shadow-md">
+                  {project.title}
+                </h3>
+              </div>
 
-              {project.liveLink && (
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-4 text-sm px-4 py-2 bg-teal-400 text-black font-semibold rounded hover:bg-teal-300 transition"
-                >
-                  Have a Look →
-                </a>
-              )}
+              {/* Description & Button */}
+              <div className="p-6">
+                <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+                  {project.description}
+                </p>
+
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 text-sm px-4 py-2 bg-teal-400 text-black font-semibold rounded hover:bg-teal-300 transition"
+                  >
+                    Have a Look →
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
