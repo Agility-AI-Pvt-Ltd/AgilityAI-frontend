@@ -1,8 +1,8 @@
 import React from "react";
 
-const TermsOfService = () => {
+const Policy = () => {
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-20 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl"></div>
@@ -14,9 +14,9 @@ const TermsOfService = () => {
         {/* Page Heading */}
         <div className="text-center mb-16">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl mb-6">
-            Terms of{" "}
+            Privacy{" "}
             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 text-transparent bg-clip-text">
-              Service
+              Policy
             </span>
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full"></div>
@@ -33,120 +33,133 @@ const TermsOfService = () => {
                 </p>
               </div>
               <p className="text-gray-300 text-xl leading-relaxed">
-                Welcome to{" "}
-                <span className="text-blue-400 font-bold">AgilityAI</span>. By
-                accessing or using our website or services, you agree to be
-                bound by the following Terms of Service. Please read them
-                carefully before proceeding.
+                This Privacy Policy outlines how{" "}
+                <span className="text-blue-400 font-bold">AgilityAI</span>{" "}
+                collects, uses, and protects your personal data. Please read it
+                carefully to understand your rights and our responsibilities.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Terms Sections */}
+        {/* Policy Sections */}
         <section className="space-y-8 max-w-5xl mx-auto">
           {[
             {
-              title: "1. Use of Our Platform",
-              icon: "🖥️",
+              title: "Scope and Applicability",
+              icon: "📘",
               content: [
-                "You may use our platform only if you are 16 years or older and legally capable of entering into a contract.",
-                "You agree to use the platform in accordance with these Terms and all applicable laws and regulations.",
+                "This Privacy Policy applies to all personal data collected through our website, mobile applications (if any), and related services.",
+                "It does not apply to third-party websites or services linked through our platform.",
               ],
             },
             {
-              title: "2. Account Registration",
-              icon: "👤",
+              title: "Information We Collect",
+              icon: "📊",
               content: [
-                "Certain features may require you to create an account. You are responsible for maintaining the confidentiality of your login credentials and all activities under your account.",
-                "You agree to provide accurate and complete information and to update it as needed.",
+                "A. Information You Provide Voluntarily:",
+                "• Full name, email address, phone number",
+                "• Company/organization name",
+                "• Payment or billing details (for paid services)",
+                "• Support or inquiry communication content",
+                "",
+                "B. Information Collected Automatically:",
+                "• IP address, approximate geolocation",
+                "• Browser type, OS, device info",
+                "• Pages visited, time spent, navigation paths",
+                "",
+                "C. Cookies and Similar Technologies:",
+                "We use cookies to enhance user experience and analyze trends. Cookie preferences can be managed via browser settings.",
               ],
             },
             {
-              title: "3. Services and Access",
-              icon: "🔧",
-              content: [
-                "We provide access to technology-related services and tools. We may add, modify, or remove features at our discretion.",
-                "We do not guarantee uninterrupted or error-free access, though we strive to maintain uptime and performance.",
-              ],
-            },
-            {
-              title: "4. User Conduct",
+              title: "Lawful Bases for Processing",
               icon: "⚖️",
               content: [
-                "You agree not to:",
-                "• Use the platform for illegal, abusive, or harmful purposes",
-                "• Upload or share content that is offensive, defamatory, or infringes on any third-party rights",
-                "• Attempt to disrupt or interfere with the platform's functioning",
+                "We process your data under one or more of the following legal bases:",
+                "• Consent",
+                "• Contractual Necessity",
+                "• Legal Obligation",
+                "• Legitimate Interest",
               ],
             },
             {
-              title: "5. Intellectual Property",
-              icon: "🛡️",
+              title: "How We Use Your Information",
+              icon: "🛠️",
               content: [
-                "All content, design elements, logos, and software on our platform are the intellectual property of AgilityAI or its partners.",
-                "You may not copy, distribute, or reproduce any part of the platform without written permission.",
+                "• To deliver and maintain our Services",
+                "• To respond to inquiries and provide support",
+                "• To process transactions and send updates",
+                "• To analyze usage trends and improve functionality",
+                "• To personalize content and ensure security",
+                "• To comply with legal obligations",
+                "Note: We do not sell your personal data.",
               ],
             },
             {
-              title: "6. Payments",
-              icon: "💳",
+              title: "Disclosure of Information",
+              icon: "📤",
               content: [
-                "Any fees for paid services will be clearly communicated. You agree to pay applicable charges as per the plan or service selected.",
-                "Failure to make timely payments may result in suspension or termination of services.",
+                "We may share your information with:",
+                "• Service Providers",
+                "• Affiliates",
+                "• Legal Authorities",
+                "• Business Transfers (e.g., mergers, acquisitions)",
               ],
             },
             {
-              title: "7. Termination",
-              icon: "🚪",
+              title: "Data Retention",
+              icon: "🗂️",
               content: [
-                "You may stop using our services as per the agreement.",
-                "We reserve the right to suspend or terminate your access if we believe you have violated these Terms or any applicable law.",
+                "We retain personal data only as long as necessary to fulfill the purposes outlined or as required by law.",
               ],
             },
             {
-              title: "8. Disclaimers",
-              icon: "⚠️",
+              title: "International Transfers",
+              icon: "🌍",
               content: [
-                'The platform and services are provided "as is" and "as available."',
+                "Your data may be processed in countries outside your own. We take necessary steps to ensure appropriate safeguards are in place.",
               ],
             },
             {
-              title: "9. Limitation of Liability",
-              icon: "🔒",
+              title: "Security of Your Information",
+              icon: "🔐",
               content: [
-                "To the fullest extent permitted by law, we are not liable for any indirect, incidental, or consequential damages arising from your use of the platform.",
-                "Our total liability for any claim shall not exceed the amount you paid us in the last 6 months (if any).",
+                "We implement reasonable technical and organizational security measures to protect your personal data from unauthorized access, misuse, or loss.",
               ],
             },
             {
-              title: "10. Indemnity",
-              icon: "🤝",
+              title: "Your Rights and Choices",
+              icon: "🙋‍♂️",
               content: [
-                "You agree to indemnify and hold harmless AgilityAI, its team, and affiliates against any claims, damages, or expenses arising from your use of the platform or violation of these Terms.",
+                "Depending on your location, you may have rights to access, correct, delete, or restrict your personal data.",
+                "You may also have the right to object to or withdraw consent.",
               ],
             },
             {
-              title: "11. Changes to Terms",
+              title: "Children’s Privacy",
+              icon: "🧒",
+              content: [
+                "Our Services are not intended for individuals under the age of 16.",
+                "We do not knowingly collect personal data from children.",
+              ],
+            },
+            {
+              title: "Changes to This Privacy Policy",
               icon: "📝",
               content: [
-                "We may update these Terms from time to time. We will notify users by posting the revised version on our site. Continued use after changes means you accept the updated Terms.",
+                "We may update this Privacy Policy from time to time.",
+                "Material changes will be communicated clearly.",
+                "Continued use of our Services after changes constitutes acceptance.",
               ],
             },
             {
-              title: "12. Governing Law",
-              icon: "🏛️",
-              content: [
-                "These Terms shall be governed by and interpreted in accordance with the laws of India. Any disputes will be subject to the exclusive jurisdiction of the courts of India.",
-              ],
-            },
-            {
-              title: "13. Contact Us",
+              title: "Contact Information",
               icon: "📧",
               content: [
-                "If you have any questions or concerns about these Terms, please reach out to us at: ",
+                "If you have any questions or concerns regarding this policy, please contact us at:",
                 <a
-                  key="contact-email"
+                  key="email"
                   href="mailto:contact@agilityai.in"
                   className="text-blue-400 hover:text-cyan-400 underline transition-colors duration-200 font-semibold"
                 >
@@ -186,16 +199,16 @@ const TermsOfService = () => {
         <section className="mt-20 text-center">
           <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm border border-blue-400/20 rounded-2xl p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Questions about our Terms?
+              Still have privacy questions?
             </h3>
             <p className="text-gray-300 mb-6">
-              We&#39;re here to help clarify anything you need to know.
+              Reach out to us and we’ll be happy to help.
             </p>
             <a
               href="mailto:contact@agilityai.in"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              <span>Get in Touch</span>
+              <span>Contact Support</span>
               <span className="text-xl">→</span>
             </a>
           </div>
@@ -205,4 +218,4 @@ const TermsOfService = () => {
   );
 };
 
-export default TermsOfService;
+export default Policy;
