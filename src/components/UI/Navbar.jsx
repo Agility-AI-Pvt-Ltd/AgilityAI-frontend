@@ -91,9 +91,9 @@ const Navbar = () => {
             ) : (
               // If user is not authenticated, show Sign In and Create Account buttons
               <>
-                {/* <NavLink to="/login" className="py-2 px-3 border rounded-md">
+                <NavLink to="/login" className="py-2 px-3 border rounded-md">
                   Sign In
-                </NavLink> */}
+                </NavLink>
                 {/* <NavLink
                                     to="/register"
                                     className="bg-gradient-to-r from-teal-400 to-blue-600 py-2 px-3 rounded-md"
@@ -158,9 +158,9 @@ const Navbar = () => {
                 </>
               ) : (
                 <>
-                  {/* <NavLink to="/login" className="py-2 px-3 border rounded-md">
+                  <NavLink to="/login" className="py-2 px-3 border rounded-md">
                     Sign In
-                  </NavLink> */}
+                  </NavLink>
                   {/* <NavLink
             to="/register"
             className="py-2 px-3 rounded-md bg-gradient-to-r from-teal-400 to-blue-600"
