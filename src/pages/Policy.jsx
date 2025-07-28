@@ -176,7 +176,7 @@ const Policy = () => {
                 <div className="text-3xl bg-gradient-to-br from-blue-400 to-cyan-400 p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                   {section.icon}
                 </div>
-                <h2 className="text-2xl lg:text-3xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+                <h2 className="text-xl lg:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
                   {section.title}
                 </h2>
               </div>
@@ -184,7 +184,7 @@ const Policy = () => {
                 {section.content.map((line, i) => (
                   <p
                     key={i}
-                    className="text-gray-300 text-lg leading-relaxed hover:text-gray-200 transition-colors duration-200"
+                    className="text-gray-300 text-2lg leading-relaxed hover:text-gray-200 transition-colors duration-200"
                   >
                     {line}
                   </p>
