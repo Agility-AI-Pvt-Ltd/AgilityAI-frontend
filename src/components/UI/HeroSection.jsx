@@ -6,16 +6,11 @@ const HeroSection = () => {
     <div className="mx-auto ">
       <section className="relative  text-white overflow-hidden ">
         {/* Video Background */}
-        <video
+        <img
+          src="/bgVidGif.gif"
+          alt="Background"
           className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source src="/background.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        />
 
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black opacity-30"></div>
