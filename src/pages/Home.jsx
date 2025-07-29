@@ -12,7 +12,7 @@ const Home = () => {
             <div className="w-full max-w-5xl mx-auto px-4 lg:px-0">
               <div className="flex flex-col gap-8 lg:items-start items-center text-center lg:text-left">
                 <h2 className="text-[#F5FCE1] text-3xl sm:text-4xl lg:text-5xl font-bold leading-normal">
-                  Who we are?
+                  Who we are ?
                 </h2>
                 <p className="text-gray-300 text-lg leading-relaxed text-justify">
                   At Agility AI Pvt Ltd, we integrate cutting-edge AI into
