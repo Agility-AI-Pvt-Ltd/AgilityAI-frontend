@@ -40,9 +40,23 @@ import ResetPassword from "./pages/ResetPassword";
 import Assignment from "./pages/Assignment";
 import AdvisoryBoard from "./pages/AdvisoryBoard";
 import Founders from "./pages/Founders";
+import { useEffect, useState } from "react";
+import IntroVideoModal from "./IntroVideoModal";
 
 const App = () => {
   const { token, user } = useAuth();
+  const [showVideo, setShowVideo] = useState(false);
+
+  useEffect(() => {
+    const lastShown = localStorage.getItem("introVideoLastShown");
+    const now = Date.now();
+    const ONE_HOUR = 60 * 60 * 1000;
+
+    if (!lastShown || now - parseInt(lastShown) > ONE_HOUR) {
+      setShowVideo(true);
+      localStorage.setItem("introVideoLastShown", now.toString());
+    }
+  }, []);
 
   const router = createBrowserRouter([
     {
@@ -199,7 +213,12 @@ const App = () => {
     },
   ]);
 
-  return <RouterProvider router={router}> </RouterProvider>;
+  return (
+    <>
+      {showVideo && <IntroVideoModal onClose={() => setShowVideo(false)} />}
+      <RouterProvider router={router} />
+    </>
+  );
 };
 
 export default App;
