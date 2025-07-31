@@ -26,7 +26,10 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <NavLink to="/" className="flex items-center flex-shrink-0">
             <img className="h-10 w-10 mr-2" src={logo} alt="Logo" />
-            <span className="text-xl tracking-tight">AgilityAI</span>
+            <span className="text-xl tracking-tight text-white">
+              AgilityAI
+              <sup className="text-xs text-white ml-0.5 align-super">™</sup>
+            </span>
           </NavLink>
           <ul className="hidden lg:flex ml-14 space-x-12 text-[#F5FCE1]">
             {/* ABOUT US DROPDOWN */}
