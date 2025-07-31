@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Spinner from "../components/UI/Spinner";
 
-const API_KEY = "b3c9f896bfb8ae2c856d255a0d6e49b9"; // Replace with your GNews API key
-const API_URL = `https://gnews.io/api/v4/search?q=artificial+intelligence+AI+data+science&lang=en&max=50&token=${API_KEY}`;
+const API_KEY = "0830fbab9c43b9309e23ab1d75bdfc06";
+const API_URL = `https://gnews.io/api/v4/search?q=AI+OR+artificial+intelligence+OR+machine+learning&lang=en&max=10&token=${API_KEY}`;
 
 const Newsfeed = () => {
   const [newsfeed, setNewsfeed] = useState([]);
